@@ -56,3 +56,5 @@ searchInput.addEventListener("input", (e) => {
   );
   displayProducts(filteredProducts);
 });
+
+displayProducts(products);
