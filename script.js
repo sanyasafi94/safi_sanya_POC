@@ -1,6 +1,11 @@
 // Example Products
 const products = [
-  { id: 1, name: "Printed Cotton Tote Bag", category: "Bags", price: "$22.00" },
+  {
+    id: 1,
+    name: "Printed Cotton T+ote Bag",
+    category: "Bags",
+    price: "$22.00",
+  },
   {
     id: 2,
     name: "Crochet Coaster Set",
@@ -16,3 +21,16 @@ const products = [
   { id: 4, name: "Amethyst Bracelet", category: "Jewelry", price: "$20.00" },
   { id: 5, name: "Sticker Sheet", category: "Bags", price: "$10.00" },
 ];
+
+const productGrid = document.getElementById("productGrid");
+const searchInput = document.getElementById("searchInput");
+const noResults = document.getElementById("noResults");
+
+//Function for products
+function displayProducts(items) {
+  productGrid.innerHTML = "";
+  if (items.length === 0) {
+    noResults.classList.remove("hidden");
+    return;
+  }
+}
