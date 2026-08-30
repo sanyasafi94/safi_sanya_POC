@@ -33,4 +33,15 @@ function displayProducts(items) {
     noResults.classList.remove("hidden");
     return;
   }
+  noResults.classList.add("hidden");
+  items.forEach((product) => {
+    const card = document.createElement("div");
+    card.className = "product-card";
+    card.innerHTML = `
+      <h3>${product.name}</h3>
+      <p class="price">${product.price}</p>
+      <button>Add to Cart</button>
+    `;
+    productGrid.appendChild(card);
+  });
 }
