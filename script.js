@@ -45,3 +45,14 @@ function displayProducts(items) {
     productGrid.appendChild(card);
   });
 }
+
+//Event Listener
+searchInput.addEventListener("input", (e) => {
+  const searchItem = e.target.value.toLowerCase().trim();
+  const filteredProducts = products.filter(
+    (product) =>
+      product.name.toLowerCase().includes(searchItem) ||
+      product.category.toLowerCase().includes(searchItem)
+  );
+  displayProducts(filteredProducts);
+});
